@@ -1,0 +1,100 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+h3{
+    font-family: 'Sora', sans-serif;
+    font-weight: 300; 
+    margin: auto;
+}
+
+h4{
+    font-family: 'Sora', sans-serif;
+    font-weight: 400; 
+    color: azure;
+}
+
+.buttonMenu:hover{
+    color: aqua;
+}
+
+.button{
+    display: none;
+}
+
+.answer-row{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.char{
+    display: block;
+    width: 47px;
+    height: 47px;
+    float: left;
+    
+    border-width: 2px;
+    border-style: groove;
+    border-color: black;
+    border-radius: 10%;
+
+    margin-bottom: 10px;
+    margin-inline: 2px;
+
+    
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* KEYBOARD */
+.keyboard {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+}
+
+.keyboard__keys {
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.keyboard__key {
+    height: 45px;
+    width: 6%;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(86, 85, 85);
+    color: #ffffff;
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.keyboard__key--wide {
+    width: 12%;
+}
+
+.keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboard__key--dark {
+    background: rgba(0, 0, 0, 0.25);
+}
