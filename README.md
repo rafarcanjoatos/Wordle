@@ -6,4 +6,5 @@ Este jogo foi desenvolvido com DOM Javascript, por isso o HTML é bem pequeno co
 
 - Javascript, Html, Css
 - PHP e Mysql (Deprecado)
-  **Link para Acesso:** https://rafarcanjoatos.github.io/Wordle/
+  
+**Link para Acesso:** https://rafarcanjoatos.github.io/Wordle/
