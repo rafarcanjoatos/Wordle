@@ -19,7 +19,6 @@ function userAction (event){
     }
     else if(event.type=="click"){
         char = event.target.innerHTML;
-        console.log("Aqui", char)
     }
     else{
         char = event.key;

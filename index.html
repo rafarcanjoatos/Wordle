@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>   
+    <title>Wordle</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="wordle.css" media="screen" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Option 1: Bootstrap Bundle with Popper. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/22471e2f1a.js" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+</head>
+<body>
+
+<!--HEADER-->
+<div class="container-fluid bg-dark">
+
+    <!-- MENU -->
+    <div class="row p-3 justify-content-center text-center">
+        <div class="col-12">
+            <a class="buttonMenu" href="..\"><h4 class="h6">Home</h4></a>
+        </div>
+    </div>
+</div>
+
+<!--OPEN BODY-->
+<div class="container-fluid p-3">
+    <!-- GAME DIV -->
+<div class="game col-12 row justify-content-center text-center m-1">
+
+<!-- ANSWER DIV -->
+<div name="div-answer" id="div-answer" class="div-answer">
+</div>
+
+<!-- SEND BUTTON. -->
+<!-- <div name="div-buttons" class="row col-6 justify-content-center m-2">
+    <div id="div-bacskpace" name="div-bacskpace" class="div-bacskpace col-2">
+        <input type="submit" value="Apagar" name="Backspace" class="button-backspace" id="button-backspace"
+            enabled></input>
+    </div>
+    <div id="div-submit" name="div-submit" class="div-submit col-2">
+        <input type="submit" value="Enviar" name="Enter" class="button-submit" id="button-submit" disabled></input>
+    </div>
+</div> -->
+
+<!-- KEYBOARD -->
+<div name="div-keyboard" id="div-keyboard" class="div-keyboard">
+    <div class="keyboard__keys">
+        <button type="button" class="keyboard__key" id="keyboard-key-q">q</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-w">w</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-e">e</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-r">r</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-t">t</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-y">y</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-u">u</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-i">i</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-o">o</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-p">p</button><br />
+        <button type="button" class="keyboard__key" id="keyboard-key-a">a</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-s">s</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-d">d</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-f">f</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-g">g</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-h">h</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-j">j</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-k">k</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-l">l</button>
+        <button type="button" name="Backspace" class="keyboard__key keyboard__key--wide" id="keyboard-key-backspace"><i class="material-icons">backspace</i></button><br>
+        <button type="button" class="keyboard__key" id="keyboard-key-z">z</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-x">x</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-c">c</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-v">v</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-b">b</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-n">n</button>
+        <button type="button" class="keyboard__key" id="keyboard-key-m">m</button>
+        <button type="button" name="Enter" class="keyboard__key keyboard__key--wide" id="keyboard-key-enter" disabled><i class="material-icons">keyboard_return</i></button>
+    </div>
+</div>
+
+<!--CLOSE BODY-->
+</div>
+
+<!-- FOOTER -->
+<footer class="fixed-bottom bg-dark text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://atosmidia.online/">Atosmidia</a>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="js/Game.js"></script>
+<script type="text/javascript" src="js/Char.js"></script>
+<script type="text/javascript" src="js/Word.js"></script>
+<script type="text/javascript" src="js/Buttons.js"></script>
+<script type="text/javascript" src="js/Messages.js"></script>
+
+</body>
+</html>

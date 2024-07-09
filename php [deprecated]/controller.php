@@ -1,6 +1,7 @@
 <?php
 
-require_once('conect.php');
+require_once('connect.php');
+
 function logMe( $msg, $level = 'info', $file = 'main.log'){
     $levelStr = '';
  
@@ -26,7 +27,8 @@ function logMe( $msg, $level = 'info', $file = 'main.log'){
 }
 
 function importWord($server, $user, $password, $bd){
-    $connect = mysqli_connect($server, $user, $password, $bd);
+    //Function that connect with database and import an aleatory word
+    /*$connect = mysqli_connect($server, $user, $password, $bd);
     if (!$connect) {
         die("Connection failed: " . mysqli_connect_error());
     }
@@ -39,8 +41,9 @@ function importWord($server, $user, $password, $bd){
             $wordOfDay = $row["palavra_do_dia"];
         }
     } else { logMe("FALHA EM BUSCAR PALAVRA DO DIA", 'error');}
-    mysqli_close($connect);
+    mysqli_close($connect);*/
 
+    $wordOfDay = "macio";
     return $wordOfDay;
 }
 

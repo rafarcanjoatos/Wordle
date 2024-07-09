@@ -11,12 +11,12 @@ function startValidate(wordOfDay,wordOfUser,round){
 
         for (var i = 0; i < 5; i++){
             if (charsOfDay[i]==charsUser[i]){
-                hit += [i]
+                hit += [i + " "]
                 var x = document.getElementById('char-'+round+'-'+(i+1));
                 x.style.backgroundColor = 'green';  
                 
             }else if(charsHitted.indexOf(charsUser[i]) != -1){
-                near += [i]
+                near += [i + " "]
                 var y = document.getElementById('char-'+round+'-'+(i+1));
                 y.style.backgroundColor = 'yellow';  
 
@@ -27,15 +27,15 @@ function startValidate(wordOfDay,wordOfUser,round){
                 // .filter(x => x === "oi").length                
                 // console.log(charsOfDay[i]," x ",charsUser[i]," wrong");
 
-                wrong += [i]            
+                wrong += [i + " "]            
                 var z = document.getElementById('char-'+round+'-'+(i+1));
                 z.style.backgroundColor = 'red';  
             }
         }
     
-    console.log("Acertou: "+hit)
-    console.log("Quase: "+near)
-    console.log("Errou: "+wrong)
+    console.log("Acertou: " + hit)
+    console.log("Quase: " + near)
+    console.log("Errou: " + wrong)
     
     // Winner
     acertos = hit.length;
@@ -47,4 +47,24 @@ function startValidate(wordOfDay,wordOfUser,round){
     near = [];
     hit = [];
 }
-//
+
+function wordOfDay(){
+
+    const wordsList = [
+        "amigo", "banho", "canto", "dedos", "estre", "fazer", "gente", "hotel", "icone", "junto",
+        "livro", "mundo", "nuvem", "olhar", "praia", "quero", "roupa", "saber", "tempo", "unido",
+        "vinho", "xale", "yoga", "zarpa", "amado", "banjo", "carro", "doido", "estar", "feroz",
+        "gosto", "horta", "indio", "jogar", "laudo", "massa", "navio", "ouvir", "piano", "quilo",
+        "rédea", "santo", "traje", "único", "velho", "zelar", "andar", "bravo", "claro", "dores",
+        "enfim", "fraco", "grato", "humor", "idoso", "jovem", "linha", "matar", "noite", "otear",
+        "pobre", "quase", "resto", "saude", "truta", "urubu", "velar", "zelos", "acima", "beber",
+        "ceder", "deixar", "entre", "farto", "ganho", "honra", "idolo", "jeito", "leque", "mitos",
+        "nobre", "ousar", "prato", "quero", "raiva", "salvo", "terra", "unir", "vento", "xampu"
+    ];
+
+    const aleatoryIndex = Math.floor(Math.random() * wordsList.length);
+    return wordsList[aleatoryIndex];
+
+}
+
+var wordOfDay = wordOfDay();
